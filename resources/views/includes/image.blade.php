@@ -17,8 +17,6 @@
 
         <span class="datetime">{{FormatTime::LongTimeFilter($image->created_at)}}</span>
 
-
-
     </div>
 
     <div class="card-body">
@@ -56,8 +54,6 @@
         <div data-toggle="modal" data-target="#mostrar{{$image->id}}">
             <a href="#" class="btn btn-outline-dark btn-comments">Comentarios ({{count($image->comments)}})</a>
         </div>
-
-
 
     </div>
 </div>

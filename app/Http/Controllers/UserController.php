@@ -38,7 +38,7 @@ class UserController extends Controller
 
     public function index(){
 
-        $users = User::orderBy('id', 'desc')->paginate(8);
+        $users = User::orderBy('id', 'desc')->paginate(10);
 
         return view('user.index', array(
             'users' => $users
@@ -73,6 +73,7 @@ class UserController extends Controller
 
         //valida si los datos son correcto desde la request
         $id = $user->id;
+
         $validate = $this->validate($request, array(
             'name' => ['required', 'string', 'max:255'],
             'surname' => ['required', 'string', 'max:255'],

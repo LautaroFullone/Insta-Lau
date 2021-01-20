@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $images = Image::orderBy('id', 'desc')->simplePaginate(8);
+        $images = Image::orderBy('id', 'desc')->simplePaginate(30);
         //        Image::all(); devuelve todo
 
        /* echo "<pre>";
